@@ -1,25 +1,18 @@
-#include "word_processing_utils.h"
+#include "word_processing.h"
 #include <iostream>
+#include <memory>
 
 int main ()
 {
-  try
-  {
-    readInputWords();
-
-    // Print the word list
-    std::cout << "\n=== Word list:" << std::endl;
-    for (const auto& wordAndCount: words) {
-      std::cout << wordAndCount.first << " " << wordAndCount.second << std::endl;
-    }
-
-    lookupWords();
-    std::cout << "\n=== Total words found: " << std::to_string(totalFound) << std::endl;
+  try {
+    std::shared_ptr<WordProcessor> wp = std::make_shared<WordProcessor>();
+    wp->readInputWords();
+    wp->printWordList();
+    wp->lookupWords();
   }
-  catch (std::exception & e)
-  {
+  catch (std::exception & e) {
     std::cout << "error " << e.what() << std::endl;
   }
-  
+
   return 0;
 }

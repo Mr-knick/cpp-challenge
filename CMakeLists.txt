@@ -9,10 +9,11 @@ set(CMAKE_CXX_STANDARD_REQUIRED ON)
 include_directories(include/)
 
 set(SRC_FILES
-        src/wordOccurrenceCounter.cxx)
+        src/wordOccurrenceCounter.cxx
+        src/word_processing.cpp)
 
 set(HDR_FILES
-        include/word_processing_utils.h)
+        include/word_processing.h)
 
 set(TEST_FILES
         tests/word_processing_test.cpp)
