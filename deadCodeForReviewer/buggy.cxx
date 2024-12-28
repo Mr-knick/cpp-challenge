@@ -58,7 +58,7 @@ static void readInputWords ()
     // By default cin will only do one word at a time
     std::cin >> inputWord;
 
-    // Clear any additional information that may have been input on the line.
+    // Clear any additional text and spaces that may have been input on the line.
     // This will ensure only one word is accepted at a time
     std::cin.clear();
     std::cin.ignore(INT_MAX, '\n');
