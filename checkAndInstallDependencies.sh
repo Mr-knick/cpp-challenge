@@ -21,3 +21,11 @@ requiredVer="3.28.0"
     sudo apt update
     sudo apt install -y ninja-build
  fi
+
+  if command -v ninja &> /dev/null; then
+     echo "Valgrind is already installed."
+  else
+     echo "Installing Valgrind..."
+     sudo apt update
+     sudo apt install valgrind
+  fi

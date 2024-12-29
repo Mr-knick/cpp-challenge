@@ -3,4 +3,6 @@
 mkdir build
 cd build || exit
 cmake .. -GNinja && ninja
-ctest
+cp ../tests/wordOccurrenceCounterTest.sh .
+chmod +x wordOccurrenceCounterTest.sh
+./wordOccurrenceCounterTest.sh
