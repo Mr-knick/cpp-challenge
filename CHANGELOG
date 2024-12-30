@@ -1,0 +1,80 @@
+commit 4db59a0def5b558f0d7cbf3747c5e085276ec145
+Author: Brent <brent.knickerbocker@gmail.com>
+Date:   Sun Dec 29 18:27:29 2024 -0800
+
+    Cleaned up notes and output messages before delivery
+
+commit e762bf491e3c43d6fdc0a4a107d41d9f737ad159
+Author: Brent <brentknickerbocker@gmail.com>
+Date:   Sun Dec 29 09:38:03 2024 -0800
+
+    Update README
+
+commit 03d2de6a7046e173a8a3431b1551801f7d327617
+Author: Brent <brent.knickerbocker@gmail.com>
+Date:   Sun Dec 29 00:03:04 2024 -0800
+
+    Added unit testing. Added valgrind memory testing.
+
+commit 560b402c5d6a39c5cf0258cc8537f55e0057a3c1
+Author: Brent <brent.knickerbocker@gmail.com>
+Date:   Sat Dec 28 12:54:53 2024 -0800
+
+    Moved over to class structure and calling via smart pointers. Last task is to update tests then complete
+
+commit 9e4e91e92a2e1546c98fc73eb4dc45099b8c1f4b
+Author: Brent Knickerbocker <brentknickerbocker@gmail.com>
+Date:   Sat Dec 28 18:08:37 2024 +0000
+
+    Break up of file. (still no classes) Created tests and CMAKE to run them. Added bash files to check for dependencies and build project
+
+commit 735fb3f335700710aab75965e2c2424177c68202
+Author: Brent Knickerbocker <brentknickerbocker@gmail.com>
+Date:   Sat Dec 28 04:35:21 2024 +0000
+
+    rearranged files in normal work style. Added scripts for dependencies and building
+
+commit 46d9f63fdc9f114756d11fac884c1ee590a2ed32
+Author: Brent Knickerbocker <brentknickerbocker@gmail.com>
+Date:   Thu Dec 26 06:35:45 2024 +0000
+
+    Cleaned up code and have the most basic version of the requirements completed.
+
+    Will accept only one input per line. Note does not account for words with spaces and drops inputs after the first word's space.
+
+    Uses a map to maintin alphabetic order and quick addition and removal of words. Uses a queue to add words to be processed into map(a little overkill but so is the thread itself). Mutex's added to ensure thread safety. Also added delete to clean up thread.
+
+    Next move is to change it to break up files, switch out to smart pointers, and add testing.
+
+commit e37589cd179e9edb849228dd51d5f068ad85a31e
+Author: Brent Knickerbocker <brentknickerbocker@gmail.com>
+Date:   Thu Dec 26 00:38:42 2024 +0000
+
+    Implemented base functionality. Clean up and improvements to come next.
+
+    Removed dependency on depercated gets. Deprecated in c++14.
+    Implemented moderen c++ method for reading STDIN cin. Cin by default works with c++ types. Removed excessive uses of c-types to c++ types to maintain redability and reduce risk of type casting mistakes and buffer errors.
+    All types are strings now. Can be moved back to char arrays if needed for space but recommend sticking to vectors verses c-style null terminated. This will reduce chances of potential buffer issues.
+
+    Its not stated the nature of the words in the requirements so sticking to arbitrary length. If sticking to words within a language the longest single word in English is 45 characters, 64 in Icelandic, or 180k for a protein name and that can be used as a buffer. Unless we decide to include compound words.
+    Because of the uncertainty with these requirements strings seem the safest approach. This is where buisness case would influence design decisions ie. a word list for a writing program, a word list for a protein catalog.
+
+    With the above changes the need for the Word struct went away so it was removed.
+
+commit 32200ff18d617eb8cd694afac9d20494efce7cb5
+Author: Brent Knickerbocker <brentknickerbocker@gmail.com>
+Date:   Wed Dec 25 19:22:06 2024 +0000
+
+    added Cmake and set version to cpp 23 as per requirements
+
+commit 8a375d4ebe341d7f8f2a385cd1b569eaeef44f45
+Author: Brent Knickerbocker <brentknickerbocker@gmail.com>
+Date:   Wed Dec 25 03:52:36 2024 +0000
+
+    initial file commit
+
+commit e79d8207fb13f1e5a83df313aa443afa09e055d3
+Author: Brent <brentknickerbocker@gmail.com>
+Date:   Tue Dec 24 19:36:03 2024 -0800
+
+    Initial commit
