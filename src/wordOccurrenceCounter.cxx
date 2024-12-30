@@ -5,6 +5,7 @@
 int main ()
 {
   try {
+    std::cout << "Input words into word list" << std::endl;
     std::shared_ptr<WordProcessor> wp = std::make_shared<WordProcessor>();
     wp->readInputWords();
     wp->printWordList();

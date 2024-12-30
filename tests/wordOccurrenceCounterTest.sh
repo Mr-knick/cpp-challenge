@@ -1,6 +1,8 @@
 #!/bin/bash
 
-# ctest is a little wonky with cin and didn't want to make all the function public so wrote up a batch
+# ctest is a isn't the best with cin and didn't want to make all the function public so wrote up this script instead
+
+echo -e "\n === Begin testing ==="
 
 echo -e "=== No input test"
 output=$(echo "end" | ./wordOccurrenceCounter 2>&1)

@@ -26,8 +26,13 @@ public:
     // Delete move assignment constructor
     WordProcessor& operator=(WordProcessor&&) = delete;
 
+    // Reads the input words from STDIN
     void readInputWords();
+
+    // Looks up the words within m_words
     void lookupWords();
+
+    // Prints words within m_words
     void printWordList() ;
 
 private:
